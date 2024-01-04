@@ -1,0 +1,65 @@
+
+  :root {
+    --background-colors--primary: var(--swatch--midnight-blue);
+    --fonts-family--paragraph-font: Lato, sans-serif;
+    --font-colors--paragraph: var(--swatch--cadet-blue);
+    --font-colors--heading-gradient-1: var(--swatch--sky-blue);
+    --font-colors--heading-gradient-2: var(--swatch--teal-blue);
+    --fonts-family--heading-font: Lato, sans-serif;
+    --font-colors--heading-primary: var(--swatch--sky-blue);
+    --swatch--midnight-blue: #050713;
+    --font-colors--link: var(--swatch--steel-gray);
+    --font-colors--link-hover: var(--swatch--slate-blue);
+    --swatch--deep-navy: #111725;
+    --swatch--grey\<deleted\|variable-94a2a119-f0c5-c24a-a78a-21e8abcbac88\>: #242424;
+    --swatch--periwinkle-blue\<deleted\|variable-e2b23002-dc64-f91c-e772-558067eb89c2\>: #5153ce;
+    --button-primary--border: var(--swatch--steel-gray);
+    --button-primary--border-radius: 20rem;
+    --button-primary--background: var(--swatch--steel-gray);
+    --button-primary--text: var(--swatch--deep-navy);
+    --button-primary--border-hover: var(--swatch--slate-blue);
+    --button-primary--background-hover: var(--swatch--slate-blue);
+    --button-primary--text-hover: var(--swatch--gunmetal);
+    --button-secondary--border: var(--swatch--steel-gray);
+    --button-secondary--background: var(--swatch--transparent);
+    --button-secondary--text: var(--swatch--steel-gray);
+    --button-secondary--border-hover: var(--swatch--slate-blue);
+    --button-secondary--background-hover: var(--swatch--transparent);
+    --button-secondary--text-hover: var(--swatch--slate-blue);
+    --swatch--transparent: rgba(255, 255, 255, 0);
+    --border--strokes-2: var(--swatch--gunmetal);
+    --form--border: var(--border--strokes-2);
+    --border--radius-small: .5rem;
+    --form--background: var(--background-colors--secondary);
+    --form--place-holder-text: var(--font-colors--paragraph);
+    --form--focused-border: var(--font-colors--paragraph);
+    --form--focused-text: var(--font-colors--heading-primary);
+    --icon--icon: var(--swatch--slate-blue);
+    --border--strokes: var(--swatch--dark-charcoal);
+    --background-colors--secondary: var(--swatch--midnight-black);
+    --background-colors--gradient-2: var(--swatch--mint-green);
+    --background-colors--gradient-1: var(--swatch--dodger-blue);
+    --border--radius-large: 1rem;
+    --background-colors--tertiary: var(--swatch--deep-navy);
+    --swatch--charcoal\<deleted\|variable-7ce553ac-38bb-d015-a0dc-c7f61c56011f\>: #131121;
+    --swatch--silver-steel\<deleted\|variable-a214e77f-c16f-d580-fd2e-9b27c061e17d\>: #91969a;
+    --swatch--sky-blue: #a4c7f1;
+    --swatch--teal-blue: #fff;
+    --swatch--steel-gray: #6d809c;
+    --swatch--midnight-black: #0e1124;
+    --swatch--dark-charcoal: #151a26;
+    --swatch--gunmetal: #2c3549;
+    --swatch--slate-blue: #606c85;
+    --swatch--cadet-blue: #96a0be;
+    --swatch--dodger-blue: #1fa2ff;
+    --swatch--mint-green: #a6ffcb;
+
+    body {
+      background-color: var(--background-colors--primary);
+      font-family: var(--fonts-family--paragraph-font);
+      color: var(--font-colors--paragraph);
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+  }
+
