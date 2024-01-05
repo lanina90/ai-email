@@ -12,7 +12,8 @@
   display: flex;
   position: sticky;
   top: 0;
-  min-height: 4rem;
+  height: 4rem;
+  z-index: 998;
 
   .container {
     width: 100%;
@@ -150,17 +151,20 @@
   overflow: hidden;
   transition: height .5s ease;
   visibility: hidden;
+  z-index: 999;
+
 
   &.open{
     height: 100vh;
     visibility: visible;
+    z-index: 999;
   }
 
 }
 
 .navbar-menu {
   width: 100%;
-  height: auto;
+  height: 100vh;
   background-color: var(--background-colors--primary);
   -webkit-text-fill-color: inherit;
   background-clip: border-box;
@@ -169,6 +173,7 @@
   margin-left: 0;
   padding: 1rem 5% 6.5rem;
   position: absolute;
+  z-index: 999;
 
 
   .navbar-menu-right {
@@ -242,7 +247,8 @@
     display: flex;
     max-height: 24px;
     padding: 0;
-
+    background: transparent;
+    border: none;
     align-items: center;
 
     .navbar-menu-left {

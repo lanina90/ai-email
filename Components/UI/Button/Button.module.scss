@@ -1,0 +1,25 @@
+@import  'styles/utils/variables';
+@import 'styles/utils/mixin';
+
+.button {
+  border: 1.2px solid var(--button-primary--border);
+  border-radius: var(--button-primary--border-radius);
+  color: var(--button-primary--text);
+  text-align: center;
+  padding: 0.75rem 1.5rem;
+  transition: color .2s, border-color .2s, background-color .2s;
+  cursor: pointer;
+  display: inline-block;
+
+  &--filled{
+    background-color: var(--button-primary--background);
+
+  }
+
+  &--text{
+    border-color: var(--button-secondary--border);
+    background-color: var(--button-secondary--background);
+    color: var(--button-secondary--text);
+  }
+}
+
