@@ -1,0 +1,10 @@
+@import './variables';
+
+
+@function getBreakpoint($value) {
+  @if not map-has-key($breakpoints, $value) {
+    @return $value;
+  }
+
+  @return map-get($breakpoints, $value);
+}
