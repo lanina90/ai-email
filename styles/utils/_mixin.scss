@@ -15,3 +15,44 @@
     }
   }
 }
+
+$border-stroke: 2px solid var(--border--strokes);
+$background-image: radial-gradient(circle farthest-corner at 50% 50%, var(--background-colors--primary) 58%, var(--border--strokes-2));
+$border-radius: 30rem;
+$flex-center: (
+  justify-content: center,
+  align-items: center,
+  display: flex
+);
+
+@mixin circle-style($width, $height, $bg-image: $background-image) {
+  width: $width;
+  height: $height;
+  border: $border-stroke;
+  background-image: $bg-image;
+  border-radius: $border-radius;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex($direction, $justify, $align, $gap ) {
+
+  display: flex;
+  @if not $direction {
+    flex-direction: row;
+  } @else {
+    flex-direction: $direction;
+  }
+
+  @if not $align {
+    align-items: center;
+  } @else {
+    align-items: $align;
+  }
+
+  justify-content: $justify;
+  gap: $gap
+}
+

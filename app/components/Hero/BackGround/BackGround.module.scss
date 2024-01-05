@@ -1,0 +1,88 @@
+@import 'styles/utils/variables';
+@import 'styles/utils/mixin';
+
+.backgroundWrapper {
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+
+  .backgroundGradient, .backgroundGradientLine {
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+  }
+
+  .backgroundGradientLine {
+    height: 100%;
+    background-image: linear-gradient(to bottom, var(--swatch--transparent), var(--swatch--transparent) 32%, var(--background-colors--primary) 58%, var(--background-colors--primary)), linear-gradient(270deg, var(--background-colors--primary), var(--border--strokes) 10%, var(--background-colors--primary) 20%, var(--border--strokes) 30%, var(--background-colors--primary) 40%, var(--border--strokes) 50%, var(--background-colors--primary) 60%, var(--border--strokes) 70%, var(--background-colors--primary) 80%, var(--border--strokes) 90%, var(--background-colors--primary));
+  }
+
+  .backgroundGradient {
+    height: 40%;
+    background-image: linear-gradient(to bottom, var(--background-colors--primary), var(--swatch--transparent) 21%, var(--swatch--transparent)), url("https://assets-global.website-files.com/656f1d3d61238bb5e4dfada3/6573e68f76d35e9976150e73_Box.png");
+    background-position: 0 0, 0 0;
+    background-size: auto, 50px;
+  }
+
+  .circleWrapper {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: absolute;
+    top: -18.1rem;
+    bottom: auto;
+    left: 0;
+    right: 0;
+
+    .lastCircle {
+      @include circle-style(30rem, 30rem, radial-gradient(circle farthest-corner at 50% 50%, var(--background-colors--primary) 58%, var(--border--strokes-2)));
+
+      .circle1n {
+        @include circle-style(25rem, 25rem);
+
+        .circle2 {
+          @include circle-style(20rem, 20rem);
+
+          .circle3 {
+            @include circle-style(15rem, 15rem);
+
+            .circle4 {
+              @include circle-style(10rem, 10rem,linear-gradient(134deg, var(--background-colors--gradient-1), var(--background-colors--primary)));
+            }
+          }
+        }
+      }
+
+      .circleLine {
+        width: 30rem;
+        height: 0.1rem;
+        background-color: var(--border--strokes);
+        position: absolute;
+        transform: rotate(30deg);
+
+        &.circleLine1 {
+          transform: rotate(60deg);
+        }
+
+        &.circleLine2 {
+          transform: rotate(90deg);
+        }
+
+        &.circleLine3 {
+          transform: rotate(120deg);
+        }
+
+        &.circleLine4 {
+          transform: rotate(150deg);
+        }
+      }
+    }
+  }
+}

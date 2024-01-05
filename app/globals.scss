@@ -3,11 +3,11 @@
   :root {
 
     --background-colors--primary: var(--swatch--midnight-blue);
-    --fonts-family--paragraph-font: Lato, sans-serif;
+    --fonts-family--paragraph-font: var(--lato-font) ;
     --font-colors--paragraph: var(--swatch--cadet-blue);
     --font-colors--heading-gradient-1: var(--swatch--sky-blue);
     --font-colors--heading-gradient-2: var(--swatch--teal-blue);
-    --fonts-family--heading-font: Lato, sans-serif;
+    --fonts-family--heading-font: var(--lato-font) ;
     --font-colors--heading-primary: var(--swatch--sky-blue);
     --swatch--midnight-blue: #050713;
     --font-colors--link: var(--swatch--steel-gray);
@@ -62,6 +62,8 @@
       color: var(--font-colors--paragraph);
       font-size: 1rem;
       line-height: 1.5;
+
     }
+
   }
 

@@ -1,0 +1,179 @@
+@import  'styles/utils/variables';
+@import 'styles/utils/mixin';
+
+  .container{
+    width: 100vw;
+    padding-left: 5%;
+    padding-right: 5%;
+    overflow: hidden;
+    z-index: 1;
+
+    .wrapper{
+      width: 100%;
+      max-width: 80rem;
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+
+      @include breakpoint(tablet){
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+
+      }
+
+      @include breakpoint(laptop){
+        padding-top: 7rem;
+        padding-bottom: 7rem;
+
+      }
+
+      .hero{
+        perspective: 1300px;
+        mix-blend-mode: normal;
+        position: relative;
+        @include  flex(column, null, center, 3rem);
+
+        @include breakpoint(tablet){
+          gap: 4.5rem;
+        }
+
+        @include breakpoint(laptop){
+          gap: 5rem;
+        }
+
+        .gradient-circle {
+          width: 40rem;
+          height: 2rem;
+          background-color: var(--background-colors--gradient-2);
+          filter: blur(50px);
+          margin-left: auto;
+          margin-right: auto;
+          position: absolute;
+          top: auto;
+          bottom: 0;
+          left: 0;
+          right: 0;
+        }
+
+        .hero-text{
+          text-align: center;
+          width: 100%;
+          max-width: 48rem;
+          box-sizing: border-box;
+          @include flex(column, null, center, 1.25rem);
+
+          @include breakpoint(tablet){
+            gap: 1.5rem;
+          }
+
+          & h1{
+            background-image: linear-gradient(to bottom, var(--font-colors--heading-gradient-1), var(--font-colors--heading-gradient-2));
+            font-family: var(--fonts-family--heading-font);
+            color: var(--font-colors--heading-primary);
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            margin-top: 0;
+            margin-bottom: 0;
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+
+            & span {
+              background-image: linear-gradient(to right, var(--background-colors--gradient-1), var(--background-colors--gradient-2));
+              -webkit-text-fill-color: transparent;
+              -webkit-background-clip: text;
+              background-clip: text;
+              position: static;
+              font-family: var(--fonts-family--heading-font);
+              font-weight: 700;
+            }
+
+            & p{
+              font-size: 1rem;
+              color: var(--font-colors--paragraph);
+
+              @include breakpoint(tablet){
+                font-size: 1.125rem;
+              }
+            }
+
+
+            @include breakpoint(tablet){
+              font-size: 3.25rem;
+            }
+          }
+
+          .buttons{
+            @include flex(row, center, center, 16px)
+          }
+        }
+
+        .hero-image{
+          border: 1px solid var(--border--strokes);
+          border-radius: var(--border--radius-large);
+          overflow: hidden;
+          will-change: transform;
+          transform-style: preserve-3d;
+
+          .hero-image-wrapper{
+            z-index: 1;
+            border-radius: var(--border--radius-large);
+            background-color: var(--background-colors--primary);
+            padding: .2rem;
+            position: relative;
+            overflow: hidden;
+
+            .ellipse {
+              width: 10rem;
+              height: 10rem;
+              background-color: var(--background-colors--gradient-1);
+              filter: blur(40px);
+              position: absolute;
+              top: 0;
+              bottom: auto;
+              left: 0;
+              right: auto;
+              animation: moveEllipse 2.5s linear infinite;
+
+              @keyframes moveEllipse {
+                0% {
+                  opacity: .5;
+                  transform: translate3d(-100px, 0, 0);
+                }
+                50% {
+                  opacity: 1;
+                }
+                100% {
+                  opacity: 0;
+                  transform: translate3d(80vw, 0, 0);
+                }
+              }
+
+
+            }
+
+            .hero-image-block{
+              border-radius: var(--border--radius-large);
+              position: relative;
+              overflow: hidden;
+
+              .hero-image{
+                width: 100%;
+                height: 100%;
+                border-radius: var(--border--radius-small);
+                overflow: hidden;
+
+                & img{
+                  height: 100%;
+                }
+              }
+            }
+
+          }
+        }
+      }
+
+    }
+  }
