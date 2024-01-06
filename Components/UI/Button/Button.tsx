@@ -1,5 +1,6 @@
 import React, {ButtonHTMLAttributes, ReactNode} from 'react';
 import Link, { LinkProps as NextLinkProps } from 'next/link';
+import Image from "next/image";
 import styles from './Button.module.scss'
 import classNames from "classnames";
 
@@ -17,7 +18,7 @@ type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 type CommonProps = {
   children: ReactNode;
   className?: string | null;
-  variant?: 'filled' | 'text';
+  variant?: 'filled' | 'text' | 'icon';
 };
 
 type Props  = CommonProps & (LinkProps | ButtonProps);
@@ -42,6 +43,7 @@ const Button: React.FC<Props> = props   => {
     return (
       <Link href={href} {...linkProps} className={buttonClassNames}>
         {children}
+        {variant === 'icon' && <Image src='/images/icons/play.svg' alt='security' height={16} width={16}/>}
       </Link>
     );
   }
@@ -50,6 +52,8 @@ const Button: React.FC<Props> = props   => {
   return (
     <button type="button" className={buttonClassNames} {...buttonProps}>
       {children}
+      {variant === 'icon' && <Image src='/images/icons/play.svg' alt='security' height={16} width={16}/>}
+
     </button>
   );
 };

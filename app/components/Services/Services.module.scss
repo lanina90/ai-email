@@ -8,6 +8,20 @@
   @include flex(column, center, center, 3rem);
 
 
+
+  .service-title{
+    &.fadeIn {
+      animation: fadeIn 1s ease-out;
+
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+    }
+  }
+
+
+
   @include breakpoint(laptop){
     padding-top: 6rem;
     padding-bottom: 6rem;
