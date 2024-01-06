@@ -67,44 +67,6 @@
             gap: 1.5rem;
           }
 
-          & h1{
-            background-image: linear-gradient(to bottom, var(--font-colors--heading-gradient-1), var(--font-colors--heading-gradient-2));
-            font-family: var(--fonts-family--heading-font);
-            color: var(--font-colors--heading-primary);
-            -webkit-text-fill-color: transparent;
-            -webkit-background-clip: text;
-            background-clip: text;
-            margin-top: 0;
-            margin-bottom: 0;
-            font-size: 2.5rem;
-            font-weight: 700;
-            line-height: 1.2;
-
-            & span {
-              background-image: linear-gradient(to right, var(--background-colors--gradient-1), var(--background-colors--gradient-2));
-              -webkit-text-fill-color: transparent;
-              -webkit-background-clip: text;
-              background-clip: text;
-              position: static;
-              font-family: var(--fonts-family--heading-font);
-              font-weight: 700;
-            }
-
-            & p{
-              font-size: 1rem;
-              color: var(--font-colors--paragraph);
-
-              @include breakpoint(tablet){
-                font-size: 1.125rem;
-              }
-            }
-
-
-            @include breakpoint(tablet){
-              font-size: 3.25rem;
-            }
-          }
-
           .buttons{
             @include flex(row, center, center, 16px)
           }
