@@ -1,0 +1,93 @@
+@import "styles/utils/variables";
+@import "styles/utils/mixin";
+
+.container{
+  background-color: var(--background-colors--primary);
+  padding: 4rem 5%;
+  width: 100%;
+  @include flex(column, center, center, 3rem);
+
+
+  @include breakpoint(laptop){
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    gap: 4.5rem;
+  }
+
+  @include breakpoint(desktop){
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+    gap: 5rem;
+  }
+
+  .service-list{
+    grid-column-gap: 3rem;
+    grid-row-gap: 3rem;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+    grid-auto-columns: 1fr;
+    align-content: space-around;
+    align-items: stretch;
+    justify-items: stretch;
+    display: grid;
+
+    @include breakpoint(laptop){
+      grid-column-gap: 3rem;
+      grid-row-gap: 4rem;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+
+    .service-item{
+      width: 100%;
+      border: 1px solid var(--border--strokes);
+      border-radius: var(--border--radius-small);
+      background-color: var(--background-colors--secondary);
+      background-image: linear-gradient(to bottom, var(--background-colors--primary), var(--background-colors--tertiary));
+      text-align: center;
+      padding: 1.5rem;
+      @include flex(column, null, center, 1.5rem );
+
+      &.fadeIn {
+        animation: fadeIn 1s ease-out;
+
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(20px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+      }
+
+      &[data-area="grid-area"]{
+        grid-area: span 1 / span 2 / span 1 / span 2;
+      }
+
+      &.box-bg{
+        background-image: url("https://assets-global.website-files.com/656f1d3d61238bb5e4dfada3/6573e68f76d35e9976150e73_Box.png"), linear-gradient(to bottom, var(--background-colors--primary), var(--background-colors--tertiary));
+        background-position: 0 0, 0 0;
+        background-size: 50px, auto;
+      }
+
+      @include breakpoint(laptop){
+        gap: 2rem;
+      }
+
+      .service-image-wrapper{
+        width: 100%;
+        border-radius: var(--border--radius-small);
+      }
+
+      .service-info{
+        @include flex(column, null, center, 0.75rem );
+
+
+
+        @include breakpoint(laptop){
+          gap: 1rem;
+        }
+      }
+
+
+    }
+  }
+
+}

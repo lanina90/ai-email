@@ -4,6 +4,7 @@ import React, {useEffect, useState} from 'react';
 import BackGround from "@/app/components/Hero/BackGround/BackGround";
 import Button from "@/Components/UI/Button/Button";
 import styles from './Hero.module.scss'
+import Typography from "@/Components/Typography/Typography";
 
 
 const Hero = () => {
@@ -35,10 +36,8 @@ const Hero = () => {
           <div className={styles.hero}>
             <div className={styles["gradient-circle"]}/>
             <div className={styles["hero-text"]}>
-              <h1>Supercharge Your Business &nbsp;Reach with <span>AI-Optimized Cold Email Campaigns</span>
-              </h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.<br/>
-              </p>
+              <Typography component='h1' variant='h1'>Supercharge Your Business Reach with <span>AI-Optimized Cold Email Campaigns</span></Typography>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique</p>
               <div className={styles.buttons}>
                 <Button variant='filled' component="link" href="/sign-up">Get Started</Button>
                 <Button variant='text' component="link" href="#Feature">Learn More</Button>
