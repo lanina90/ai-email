@@ -77,13 +77,32 @@
   font-size: 1.25rem;
   font-weight: 700;
   line-height: 1.4;
+  font-family: var(--fonts-family--heading-font);
+
+  @include breakpoint(laptop){
+    font-size: 1.5rem;
+  }
+
+}
+
+.text-h6{
+  background-image: linear-gradient(to bottom, var(--font-colors--heading-gradient-1), var(--font-colors--heading-gradient-2));
+  color: var(--swatch--deep-navy);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.4;
+  font-family: var(--fonts-family--heading-font);
 
   @include breakpoint(tablet){
     font-size: 1.25rem;
   }
 
-  @include breakpoint(tablet){
-    font-size: 1.5rem;
-  }
 
+}
+
+.text-p{
+  font-family: var(--fonts-family--heading-font);
 }

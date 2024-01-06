@@ -1,40 +1,29 @@
 'use client'
 
-import React, {useEffect, useRef} from 'react';
+import React from 'react';
 import styles from './Services.module.scss'
 import Typography from "@/Components/Typography/Typography";
 import classNames from "classnames";
+import {useObserverAnimation} from "@/hooks/useObserverAnimation";
 
 const Services = () => {
-  const containerRef = useRef<HTMLDivElement>(null);
-
-
-  useEffect(() => {
-    if (typeof window === "undefined" || !containerRef.current) return;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add(`${styles.fadeIn}`);
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    const elements = containerRef.current.querySelectorAll(`.${styles['service-item']}`);
-    elements.forEach((el) => observer.observe(el));
-
-    return () => observer.disconnect();
-  }, []);
-
+  const animateClass = `${styles.fadeIn}`
+  const RefForList = useObserverAnimation({
+    amount: "many",
+    classes: `.${styles['service-item']}`,
+    animateClass,
+    threshold: 0.1})
+  const RefForTitle = useObserverAnimation({
+    amount: "one",
+    classes: `.${styles['service-title']}`,
+    animateClass,
+    threshold: 0.1})
 
   return (
-    <section className={styles.container} ref={containerRef}>
-      <Typography component='h2' variant='h2'>Beyond Templates: <span>Your Personal Assistant</span></Typography>
-      <div className={styles['service-list']}>
-        <div data-area="grid-area"  className={styles['service-item']}>
+    <section className={styles.container} ref={RefForTitle}>
+      <Typography component='h2' variant='h2' className={styles['service-title']}>Beyond Templates: <span>Your Personal Assistant</span></Typography>
+      <div className={styles['service-list']}  ref={RefForList}>
+        <div data-area="grid-area" className={styles['service-item']}>
           <div className={styles['service-image-wrapper']}>
             <img
               src="https://assets-global.website-files.com/656f1d3d61238bb5e4dfada3/6578794d6b9f04041285ecd6_Service_Frame_2.png"
@@ -69,7 +58,7 @@ const Services = () => {
           </div>
           <div className={styles['service-info']}>
             <Typography component='h3' variant='h5'>Loaded Commands </Typography>
-            <Typography component='p' variant='p'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.  </Typography>
+            <Typography component='p' variant='p'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </Typography>
           </div>
         </div>
         <div data-area="grid-area" className={styles['service-item']}>
@@ -80,7 +69,9 @@ const Services = () => {
           </div>
           <div className={styles['service-info']}>
             <Typography component='h3' variant='h5'>Broaden Services for Diverse Client Needs </Typography>
-            <Typography component='p' variant='p'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla. </Typography>
+            <Typography component='p' variant='p'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+              varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum
+              nulla. </Typography>
           </div>
         </div>
       </div>
