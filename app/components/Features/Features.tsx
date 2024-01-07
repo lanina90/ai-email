@@ -3,7 +3,7 @@
 import React, {useEffect, useRef} from 'react';
 import styles from './Features.module.scss'
 import Typography from "@/Components/Typography/Typography";
-import FeatureCard from "@/app/components/Features/FeatureCard/FeatureCard";
+import FeatureCard from "@/Components/FeatureCard/FeatureCard";
 import {useObserverAnimation} from "@/hooks/useObserverAnimation";
 import Container from "@/Components/Container/Container";
 

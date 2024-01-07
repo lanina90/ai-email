@@ -4,7 +4,7 @@ import Image from "next/image";
 import Typography from "@/Components/Typography/Typography";
 import Button from "@/Components/UI/Button/Button";
 
-const FeatureCard = ({img, alt, title, text, link} : {img:string, alt:string, title:string, text:string, link:string}) => {
+const FeatureCard = ({img, alt, title, text, link} : {img:string, alt:string, title:string, text:string, link?:string}) => {
   return (
     <div className={styles['feature-list__item']}>
       <div className={styles['feature-list__item-icon']}>
@@ -16,7 +16,8 @@ const FeatureCard = ({img, alt, title, text, link} : {img:string, alt:string, ti
         <Typography component='h3' variant='h6'>{title}</Typography>
         <Typography component='p' variant='p'>{text}</Typography>
       </div>
-      <Button href={link} component='link' variant='icon'>Learn More</Button>
+      {link && <Button href={link} component='link' variant='icon'>Learn More</Button>}
+
     </div>
   );
 };

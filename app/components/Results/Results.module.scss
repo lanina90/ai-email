@@ -1,0 +1,67 @@
+@import "styles/utils/variables";
+@import "styles/utils/mixin";
+
+.feature-title {
+  text-align: left;
+}
+
+.results-component {
+  width: 100%;
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  grid-row-gap: 3rem;
+  grid-template-columns: 1fr;
+  grid-auto-columns: 1fr;
+  align-items: start;
+  display: grid;
+  min-height: auto;
+  grid-template-rows: auto;
+  grid-column-gap: 3rem;
+  grid-auto-flow: row;
+
+  @include breakpoint(laptop) {
+    grid-column-gap: 5rem;
+    grid-row-gap: 4rem;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-columns: 1fr;
+    align-items: start;
+    display: grid;
+  }
+
+  @include breakpoint(desktop) {
+    grid-column-gap: 5rem;
+  }
+
+  .results-text {
+    @include flex(column, null, flex-start, 1.25rem);
+
+    @include breakpoint(laptop) {
+      gap: 1.5rem;
+      position: sticky;
+      top: 30%;
+    }
+
+  }
+
+  .results-cards{
+    grid-area: span 1 / span 1 / span 1 / span 1;
+
+    .results-item{
+      margin-bottom: 2rem;
+      position: sticky;
+      overflow: hidden;
+
+      &.item-1{
+        top: 30%;
+      }
+      &.item-2{
+        top: 32%;
+      }
+    }
+
+  }
+
+}
+
