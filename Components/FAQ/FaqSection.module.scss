@@ -8,7 +8,7 @@
   margin-left: auto;
   margin-right: auto;
 
-  & p{
+  & p {
     color: var(--font-colors--paragraph);
     font-size: 1.125rem;
     text-align: center;
@@ -35,7 +35,7 @@
   }
 }
 
-.faq-list{
+.faq-list {
   grid-column-gap: 1rem;
   grid-row-gap: 1rem;
   grid-template-rows: auto;
@@ -49,7 +49,7 @@
   margin-left: auto;
   margin-right: auto;
 
-  .faq-accordion{
+  .faq-accordion {
     border: 1px solid var(--border--strokes);
     border-radius: var(--border--radius-small);
     background-color: var(--background-colors--primary);
@@ -70,25 +70,25 @@
       }
     }
 
-    .faq-question{
+    .faq-question {
       cursor: pointer;
       padding: 1rem 1.25rem;
       @include flex(row, space-between, center, 0);
 
-      @include breakpoint(laptop){
+      @include breakpoint(laptop) {
         padding: 1.25rem 1.5rem;
       }
 
-      & h3{
+      & h3 {
         color: var(--font-colors--heading-primary);
         font-size: 1rem;
 
-        @include breakpoint(laptop){
+        @include breakpoint(laptop) {
           font-size: 1.125rem;
         }
       }
 
-      .faq-icon{
+      .faq-icon {
         width: 2rem;
         min-width: 2rem;
         color: var(--icon--icon);
@@ -100,12 +100,20 @@
       }
     }
 
-    .faq-answer{
+    .faq-answer {
       padding-left: 1.25rem;
       padding-right: 1.5rem;
       overflow: hidden;
 
 
     }
+
+
   }
+
+}
+
+.questions{
+  padding: 1rem 1.25rem;
+  @include flex(column, center, center, 1.25rem);
 }
