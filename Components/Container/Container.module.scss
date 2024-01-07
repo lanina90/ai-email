@@ -1,0 +1,21 @@
+@import "styles/utils/variables";
+@import "styles/utils/mixin";
+
+.container{
+  background-color: var(--background-colors--primary);
+  padding: 4rem 5%;
+  width: 100%;
+  @include flex(column, center, center, 3rem);
+
+  @include breakpoint(laptop) {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    gap: 4.5rem;
+  }
+
+  @include breakpoint(desktop) {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+    gap: 5rem;
+  }
+}
