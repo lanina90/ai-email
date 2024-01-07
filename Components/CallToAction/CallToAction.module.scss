@@ -1,0 +1,81 @@
+@import "styles/utils/variables";
+@import "styles/utils/mixin";
+
+
+.cta-section {
+  perspective: 1000px;
+  position: relative;
+  overflow: hidden;
+
+
+
+  .cta-circle {
+    width: 100%;
+    height: 4rem;
+    background-color: var(--background-colors--gradient-1);
+    filter: blur(50px);
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    position: absolute;
+    top: auto;
+    bottom: -3.9rem;
+    left: 0%;
+    right: 0%;
+  }
+
+  .background-wrapper{
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+
+    .background-gradient-cta{
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(to bottom, var(--background-colors--primary), var(--swatch--transparent) 40%, var(--swatch--transparent)), linear-gradient(266deg, var(--background-colors--primary), var(--border--strokes) 20%, var(--background-colors--primary) 40%, var(--border--strokes) 60%, var(--background-colors--primary) 80%, var(--border--strokes));
+      position: absolute;
+      top: auto;
+      bottom: 0%;
+      left: 0%;
+      right: 0%;
+      overflow: hidden;
+    }
+
+  }
+
+  .cta-container{
+    width: 100%;
+    max-width: 48rem;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 99;
+    position: relative;
+    @include flex(column, center, center, 1.5rem);
+
+    &.fadeIn {
+      animation: fadeIn 1s ease-out;
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(60px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    }
+
+    .cta-content{
+      @include flex(column, center, center, 1.25rem);
+      text-align: center;
+    }
+
+
+
+  }
+
+}

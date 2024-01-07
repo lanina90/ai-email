@@ -8,6 +8,7 @@ import Solutions from "@/app/components/Solutions/Solutions";
 import Testimonials from "@/Components/Testimonials/Testimonials";
 import LatestPosts from "@/Components/LatestPosts/LatestPosts";
 import FaqSection from "@/Components/FAQ/FaqSection";
+import CallToAction from "@/Components/CallToAction/CallToAction";
 
 
 export default function Home() {
@@ -23,6 +24,12 @@ export default function Home() {
       <Testimonials/>
       <LatestPosts/>
       <FaqSection/>
+      <CallToAction
+        text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.'
+        btnText='Start 14 Day Free Trial'
+        h2={"Get Started with Smarter"}
+        span="AI Email Solutions Today"
+      />
     </>
   )
 }
