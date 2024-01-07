@@ -29,7 +29,7 @@ const Hero = () => {
 
 
   return (
-    <section style={{overflow: 'hidden'}}>
+    <section style={{overflow: 'hidden', position: 'relative'}}>
       <BackGround/>
       <div className={styles.container}>
         <div className={styles.wrapper}>

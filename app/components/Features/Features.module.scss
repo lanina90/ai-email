@@ -23,6 +23,9 @@
     grid-template-columns: 1fr;
     grid-auto-columns: 1fr;
     display: grid;
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
 
 
     @include breakpoint(laptop) {

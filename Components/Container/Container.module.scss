@@ -6,9 +6,7 @@
   padding: 3rem 5%;
   width: 100%;
   @include flex(column, center, center, 3rem);
-  max-width: 80rem;
-  margin-left: auto;
-  margin-right: auto;
+  position: relative;
 
   @include breakpoint(laptop) {
     padding-top: 6rem;
