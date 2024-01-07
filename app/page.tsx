@@ -4,6 +4,7 @@ import Services from "@/app/components/Services/Services";
 import Features from "@/app/components/Features/Features";
 import GetStarted from "@/app/components/GetStarted/GetStarted";
 import Results from "@/app/components/Results/Results";
+import Solutions from "@/app/components/Solutions/Solutions";
 
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
       <Features/>
       <GetStarted/>
       <Results/>
+      <Solutions/>
     </>
   )
 }
