@@ -5,6 +5,7 @@ import styles from './Features.module.scss'
 import Typography from "@/Components/Typography/Typography";
 import FeatureCard from "@/app/components/Features/FeatureCard/FeatureCard";
 import {useObserverAnimation} from "@/hooks/useObserverAnimation";
+import Container from "@/Components/Container/Container";
 
 
 const Features = () => {
@@ -23,7 +24,7 @@ const Features = () => {
   })
 
   return (
-    <section className={styles.container} ref={RefForTitle}>
+    <Container component='section' ref={RefForTitle}>
       <Typography component='h2' variant='h2' className={styles['feature-title']}>Get Better Result with <span>Stunning Features</span></Typography>
       <div className={styles['feature-list']} ref={RefForList}>
        <FeatureCard
@@ -71,7 +72,7 @@ const Features = () => {
 
 
       </div>
-    </section>
+    </Container>
   );
 };
 

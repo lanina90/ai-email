@@ -5,6 +5,7 @@ import styles from './Services.module.scss'
 import Typography from "@/Components/Typography/Typography";
 import classNames from "classnames";
 import {useObserverAnimation} from "@/hooks/useObserverAnimation";
+import Container from "@/Components/Container/Container";
 
 const Services = () => {
   const animateClass = `${styles.fadeIn}`
@@ -20,7 +21,7 @@ const Services = () => {
     threshold: 0.1})
 
   return (
-    <section className={styles.container} ref={RefForTitle}>
+    <Container component='section' ref={RefForTitle}>
       <Typography component='h2' variant='h2' className={styles['service-title']}>Beyond Templates: <span>Your Personal Assistant</span></Typography>
       <div className={styles['service-list']}  ref={RefForList}>
         <div data-area="grid-area" className={styles['service-item']}>
@@ -75,7 +76,7 @@ const Services = () => {
           </div>
         </div>
       </div>
-    </section>
+    </Container>
   );
 };
 
