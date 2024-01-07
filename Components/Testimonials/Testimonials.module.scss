@@ -1,0 +1,114 @@
+@import "styles/utils/variables";
+@import "styles/utils/mixin";
+
+
+.testimonials-title {
+  @include flex(column, flex-start, center, 1.25rem);
+
+
+  @include breakpoint(laptop) {
+    gap: 1.5rem;
+  }
+
+  &.fadeIn {
+    animation: fadeIn 1s ease-out;
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+}
+
+.testimonials-component {
+  column-count: 1;
+  column-gap: 2rem;
+
+  @include breakpoint(laptop) {
+    column-count: 2;
+  }
+
+  @include breakpoint(desktop) {
+    column-count: 3;
+  }
+
+  .testimonials-content {
+    width: 100%;
+    border: 1px solid var(--border--strokes);
+    border-radius: var(--border--radius-small);
+    background-color: var(--background-colors--secondary);
+    background-image: linear-gradient(to bottom, var(--background-colors--secondary), var(--background-colors--tertiary));
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    @include flex(column, space-between, flex-start, 1.25rem);
+
+
+    &.fadeIn {
+      animation: fadeIn 1s ease-out;
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    }
+
+    @include breakpoint(laptop) {
+      padding: 2rem;
+      gap: 1.5rem;
+    }
+
+    @include breakpoint(desktop) {
+      column-count: 3;
+    }
+
+    .testimonials-client {
+      width: 100%;
+      text-align: left;
+      @include flex(column, null, flex-start, null);
+
+      @include breakpoint(laptop) {
+        align-items: center;
+      }
+
+      .testimonials-client-image-wrapper {
+        margin-bottom: 1rem;
+        margin-right: 0;
+
+        & img {
+          width: 3rem;
+          height: 3rem;
+          min-height: 3rem;
+          min-width: 3rem;
+          object-fit: cover;
+          border-radius: 100%;
+        }
+      }
+
+      .testimonials-client-info{
+
+
+        .name{
+          font-weight: 600;
+          color: var(--font-colors--heading-primary);
+        }
+      }
+    }
+  }
+}
+
+
