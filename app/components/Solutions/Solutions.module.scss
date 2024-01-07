@@ -7,6 +7,20 @@
   max-width: 48rem;
   @include flex(column, center, center, 1.25rem);
 
+  &.fadeIn {
+    animation: fadeIn 1s ease-out;
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
 
   @include breakpoint(laptop) {
     gap: 1.5rem;
@@ -40,6 +54,21 @@
       overflow: hidden;
       align-items: stretch;
       @include flex(column, null, stretch, 0);
+
+      &.fadeIn {
+        animation: fadeIn 1s ease-out;
+
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      }
 
 
       .image-wrapper-1 {

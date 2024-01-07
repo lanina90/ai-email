@@ -1,18 +1,33 @@
+'use client'
+
 import React from 'react';
 import Container from "@/Components/Container/Container";
 import Typography from "@/Components/Typography/Typography";
 import styles from './Solutions.module.scss'
 import Button from "@/Components/UI/Button/Button";
+import {useObserverAnimation} from "@/hooks/useObserverAnimation";
 
 const Solutions = () => {
+
+  const animateClass = `${styles.fadeIn}`
+  const RefForList = useObserverAnimation({
+    amount: "many",
+    classes: `.${styles['card-item']}`,
+    animateClass,
+    threshold: 0.1})
+  const RefForTitle = useObserverAnimation({
+    amount: "one",
+    classes: `.${styles['solution-title']}`,
+    animateClass,
+    threshold: 0.2})
+
   return (
-    <Container component='section'>
+    <Container component='section' ref={RefForTitle}>
       <div className={styles['solution-title']}>
         <Typography component='h2' variant='h2'>All in One<span> Solutions</span></Typography>
         <Typography component='p' variant='p'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Typography>
       </div>
-
-        <div className={styles['layout-wrapper']}>
+        <div className={styles['layout-wrapper']} ref={RefForList} >
           <div className={styles['card-item']}>
             <div className={styles['image-wrapper-1']}>
               <div className={styles['icon-wrapper']}>
