@@ -29,6 +29,9 @@
   align-items: stretch;
   justify-items: stretch;
   display: grid;
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
 
   @include breakpoint(laptop) {
     grid-column-gap: 3rem;
