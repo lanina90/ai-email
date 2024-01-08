@@ -1,7 +1,7 @@
 'use client'
 
 import React, {useEffect, useState} from 'react';
-import BackGround from "@/app/components/Hero/BackGround/BackGround";
+import BackGround from "@/Components/BackGround/BackGround";
 import Button from "@/Components/UI/Button/Button";
 import styles from './Hero.module.scss'
 import Typography from "@/Components/Typography/Typography";
