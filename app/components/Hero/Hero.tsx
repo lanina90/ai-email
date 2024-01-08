@@ -5,6 +5,7 @@ import BackGround from "@/Components/BackGround/BackGround";
 import Button from "@/Components/UI/Button/Button";
 import styles from './Hero.module.scss'
 import Typography from "@/Components/Typography/Typography";
+import Ellipse from "@/Components/Ellipse/Ellipse";
 
 
 const Hero = () => {
@@ -45,7 +46,7 @@ const Hero = () => {
             </div>
             <div className={styles["hero-image"]} style={transformStyle}>
               <div className={styles["hero-image-wrapper"]}>
-                <div className={styles.ellipse}/>
+                <Ellipse color='blue'/>
                 <div className={styles["hero-image-block"]}>
                   <img
                     src="https://assets-global.website-files.com/656f1d3d61238bb5e4dfada3/657879726889d53a5fb8bb31_Hero_Header.jpg"

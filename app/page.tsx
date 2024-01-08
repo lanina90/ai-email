@@ -9,8 +9,11 @@ import Testimonials from "@/Components/Testimonials/Testimonials";
 import LatestPosts from "@/Components/LatestPosts/LatestPosts";
 import FaqSection from "@/Components/FAQ/FaqSection";
 import CallToAction from "@/Components/CallToAction/CallToAction";
+import {Metadata} from "next";
 
-
+export const metadata: Metadata = {
+  title: 'AI Email ',
+};
 export default function Home() {
   return (
     <>

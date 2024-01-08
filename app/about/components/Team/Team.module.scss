@@ -1,0 +1,156 @@
+@import 'styles/utils/variables';
+@import 'styles/utils/mixin';
+
+.team-component {
+  width: 100%;
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  @include flex(column, center, center, 3rem);
+
+  @include breakpoint(laptop) {
+    gap: 5rem;
+  }
+
+  &.fadeIn {
+    animation: fadeIn 1s ease-out;
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+
+  .team-title {
+    @include flex(column, center, flex-start, 1.5rem);
+    text-align: left;
+    width: 100%;
+
+    & h2 {
+      text-align: left;
+    }
+  }
+
+  .team-list {
+    grid-auto-columns: 1fr;
+    align-items: start;
+    justify-items: start;
+    display: grid;
+    grid-template-rows: auto;
+    grid-column-gap: 2rem;
+    grid-row-gap: 3rem;
+    grid-template-columns: 1fr;
+
+
+    @include breakpoint(tablet) {
+      grid-template-columns: 1fr 1fr;
+      grid-row-gap: 4rem;
+    }
+
+    @include breakpoint(laptop) {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-row-gap: 4rem;
+    }
+
+    .team-item {
+      @include flex(column, center, stretch, 1.5rem);
+
+      &.fadeIn {
+        animation: fadeIn 1s ease-out;
+
+        @keyframes fadeIn {
+          from {
+            opacity: 1;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      }
+
+      .team-link {
+        text-decoration: none;
+        max-width: 100%;
+        display: inline-block;
+        border-color: var(--swatch--midnight-blue);
+        color: var(--font-colors--link);
+        @include flex(column, center, flex-start, 1.25rem);
+
+        @include breakpoint(laptop) {
+          gap: 1.5rem;
+        }
+
+        .team-image-wrapper {
+          & img {
+            min-height: 10rem;
+            min-width: 10rem;
+            border: 1px solid var(--border--strokes);
+            object-fit: cover;
+          }
+        }
+
+        .person-name {
+          font-size: 1.25rem;
+          color: var(--font-colors--heading-primary);
+          font-weight: 600;
+          text-align: left;
+        }
+
+        .person-role {
+          color: var(--font-colors--paragraph);
+          font-size: 1.125rem;
+        }
+
+        .person-about {
+          text-align: left;
+        }
+      }
+
+      .team-social {
+        grid-column-gap: 0.875rem;
+        grid-row-gap: 0.875rem;
+        grid-template-rows: auto;
+        grid-template-columns: max-content;
+        grid-auto-columns: 1fr;
+        grid-auto-flow: column;
+        align-self: flex-start;
+        display: grid;
+
+        .team-social-link {
+          border: 1px solid var(--border--strokes);
+          border-radius: var(--border--radius-small);
+          background-color: var(--background-colors--primary);
+          padding: 0.5rem;
+          transition: background-color .2s;
+          max-width: 100%;
+
+          &:hover{
+            background-color: var(--background-colors--secondary);
+          }
+
+          .team-social-icon {
+            width: 1.5rem;
+            height: 1.5rem;
+            color: var(--icon--icon);
+            @include flex(column, center, center, 0);
+
+
+          }
+        }
+      }
+    }
+
+
+  }
+}
+
+
