@@ -87,35 +87,6 @@
             position: relative;
             overflow: hidden;
 
-            .ellipse {
-              width: 10rem;
-              height: 10rem;
-              background-color: var(--background-colors--gradient-1);
-              filter: blur(40px);
-              position: absolute;
-              top: 0;
-              bottom: auto;
-              left: 0;
-              right: auto;
-              animation: moveEllipse 2.5s linear infinite;
-
-              @keyframes moveEllipse {
-                0% {
-                  opacity: .5;
-                  transform: translate3d(-100px, 0, 0);
-                }
-                50% {
-                  opacity: 1;
-                }
-                100% {
-                  opacity: 0;
-                  transform: translate3d(80vw, 0, 0);
-                }
-              }
-
-
-            }
-
             .hero-image-block{
               border-radius: var(--border--radius-large);
               position: relative;

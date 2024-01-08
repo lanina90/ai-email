@@ -56,3 +56,15 @@ $flex-center: (
   gap: $gap
 }
 
+
+$gradient1: var(--background-colors--gradient-1);
+$gradient2: var(--background-colors--gradient-2);
+
+@mixin textColorGradient($gradient1:$gradient1, $gradient2:$gradient2) {
+  background-image: linear-gradient(to right, $gradient1, $gradient2);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  position: static;
+}
+

@@ -1,0 +1,30 @@
+@import 'styles/utils/variables';
+@import 'styles/utils/mixin';
+
+.vision-container {
+  width: 100%;
+  max-width: 48rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  @include flex(column, center, center, 0.75rem);
+
+  @include breakpoint(laptop){
+    gap: 1rem;
+  }
+
+  &.fadeIn {
+    animation: fadeIn 1s ease-out;
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  }
+
+  .text-colored{
+    @include textColorGradient
+  }
+
+
+}

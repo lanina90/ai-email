@@ -1,0 +1,146 @@
+@import "styles/utils/variables";
+@import "styles/utils/mixin";
+
+
+.story {
+  width: 100%;
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  grid-column-gap: 3rem;
+  grid-row-gap: 2rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-auto-columns: 1fr;
+  align-items: start;
+  display: grid;
+
+  @include breakpoint(laptop) {
+    grid-row-gap: 4rem;
+    grid-column-gap: 4rem;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &.fadeIn {
+    animation: fadeIn 1s ease-out;
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  }
+
+  .content-left {
+    @include flex(column, center, flex-start, 0.75rem);
+    text-align: left;
+
+    @include breakpoint(laptop) {
+      gap: 1rem;
+    }
+
+    .text-colored {
+      @include textColorGradient;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    & h2 {
+      text-align: left;
+    }
+
+  }
+
+  .content-right {
+    position: relative;
+
+    .progress-bar-wrapper {
+      width: 1px;
+      height: 75%;
+      position: absolute;
+      right: auto;
+      left: 1.7rem;
+      top: 8%;
+
+      @include breakpoint(laptop) {
+        top: 10%;
+        left: 2rem;
+      }
+
+      .progress-bar {
+        width: 1px;
+        background-color: var(--border--strokes);
+        will-change: width, height;
+      }
+    }
+
+    .story-timeline-step {
+      grid-auto-columns: 1fr;
+      display: grid;
+      grid-row-gap: 0;
+      grid-template-rows: auto;
+      grid-template-columns: max-content 1fr;
+      grid-column-gap: 24px;
+
+      @include breakpoint(laptop) {
+        grid-column-gap: 2.5rem;
+      }
+
+      .timeline-left{
+        @include flex(column, flex-start, center, 0);
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+        position: relative;
+
+        .icon-wrapper{
+          z-index: 1;
+          border: 1px solid var(--border--strokes);
+          background-color: var(--background-colors--secondary);
+          border-radius: 5px;
+          margin-left: -4px;
+          position: relative;
+          padding: 1rem 0.5rem;
+
+          .icon{
+            width: 3rem;
+            height: 3rem;
+            color: var(--icon--icon);
+            @include flex(column, center, center, 0);
+
+
+            & svg{
+              width: 3rem;
+              height: 3rem;
+            }
+
+          }
+        }
+      }
+
+      .timeline-right{
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+
+        .text-wrapper{
+          @include flex(column, center, flex-start, 0.75rem);
+
+          @include breakpoint(laptop) {
+            gap: 1rem;
+          }
+
+          .text-wrapper-top{
+            @include flex(column, center, flex-start, 0.5rem);
+
+            & p{
+              font-weight: 600;
+            }
+          }
+        }
+      }
+
+    }
+
+
+  }
+
+
+}
