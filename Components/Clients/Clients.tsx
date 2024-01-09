@@ -2,11 +2,11 @@ import React from 'react';
 import styles from './Clients.module.scss'
 import {logos} from "@/constants/logos";
 
-const Clients = () => {
+const Clients = ({title}:{title: string}) => {
 
   return (
     <section className={styles.clients}>
-     <h2>Trusted by Professionals and Teams</h2>
+     <h2>{title}</h2>
       <div className={styles['logo-component']}>
         <div className={styles['logo-list']}>
           {logos.map((logo, index) =>

@@ -1,5 +1,5 @@
 import Hero from "@/app/components/Hero/Hero";
-import Clients from "@/app/components/Clients/Clients";
+import Clients from "@/Components/Clients/Clients";
 import Services from "@/app/components/Services/Services";
 import Features from "@/app/components/Features/Features";
 import GetStarted from "@/app/components/GetStarted/GetStarted";
@@ -10,6 +10,7 @@ import LatestPosts from "@/Components/LatestPosts/LatestPosts";
 import FaqSection from "@/Components/FAQ/FaqSection";
 import CallToAction from "@/Components/CallToAction/CallToAction";
 import {Metadata} from "next";
+import React from "react";
 
 export const metadata: Metadata = {
   title: 'AI Email ',
@@ -18,7 +19,7 @@ export default function Home() {
   return (
     <>
       <Hero/>
-      <Clients/>
+      <Clients title='Trusted by Professionals and Teams'/>
       <Services/>
       <Features/>
       <GetStarted/>

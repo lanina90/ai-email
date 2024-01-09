@@ -2,7 +2,6 @@
 @import "styles/utils/mixin";
 
 .container{
-  background-color: var(--background-colors--primary);
   padding: 3rem 5%;
   width: 100%;
   @include flex(column, center, center, 3rem);
