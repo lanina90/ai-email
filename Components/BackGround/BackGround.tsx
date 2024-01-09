@@ -1,11 +1,11 @@
 import React from 'react';
 import styles from "./BackGround.module.scss";
 
-const BackGround = () => {
+const BackGround = ({backgroundGradient = true}: {backgroundGradient?:boolean}) => {
   return (
     <div className={styles.backgroundWrapper}>
       <div className={styles.backgroundGradientLine}/>
-      <div className={styles.backgroundGradient}/>
+      {backgroundGradient && <div className={styles.backgroundGradient}/>}
       <div className={styles.circleWrapper}>
         <div className={styles.lastCircle}>
           <div className={styles.circle1n}>
