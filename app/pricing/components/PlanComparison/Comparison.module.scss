@@ -1,0 +1,210 @@
+@import 'styles/utils/variables';
+@import 'styles/utils/mixin';
+
+
+.pricing-comparison-component {
+  @include flex(column, center, center, 2rem);
+  width: 100%;
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+
+  @include breakpoint(laptop) {
+    gap: 3rem;
+  }
+
+
+}
+
+.comparison-component {
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  display: flex;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  gap: 2.5rem;
+
+  &.fadeIn {
+    animation: fadeIn 1s ease-out;
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  }
+
+
+  .comparison-tabs-menu {
+    border: 1px solid var(--button-secondary--border);
+    border-radius: var(--border--radius-small);
+    background-color: var(--background-colors--secondary);
+    align-self: center;
+    margin-bottom: 5rem;
+    display: flex;
+    overflow: hidden;
+
+
+  }
+
+  .w-tab-content {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+
+
+  }
+}
+
+.pricing-compare-plans {
+  @include flex(column, center, center, 2rem);
+  width: 100%;
+
+  .pricing-compare-top-row {
+    grid-auto-columns: 1fr;
+    display: grid;
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
+    background-color: rgba(0, 0, 0, 0);
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+
+    @include breakpoint(laptop) {
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      grid-column-gap: 2rem;
+      grid-row-gap: 0;
+    }
+
+
+
+    .top-row-content {
+      height: 100%;
+      width: 100%;
+      text-align: center;
+      @include flex(column, space-between, stretch, 1.5rem);
+
+      @include breakpoint(laptop) {
+        gap: 2rem;
+      }
+
+      .top-row-wrapper {
+        @include flex(column, center, center, 0.75rem);
+        width: 100%;
+
+        @include breakpoint(laptop) {
+          gap: 1rem;
+        }
+
+
+        .price {
+          font-size: 2.5rem;
+          color: var(--font-colors--heading-primary);
+          font-weight: 400;
+          line-height: 1.2;
+
+          @include breakpoint(laptop) {
+            font-size: 3rem;
+          }
+        }
+
+        .discount {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  .pricing-category-wrapper {
+    @include flex(column, center, center, 1.25rem);
+    width: 100%;
+
+    .pricing-category-content {
+      @include flex(column, center, center, 0);
+      width: 100%;
+
+      &:nth-child(even) {
+        background-color: var(--background-colors--secondary);
+        border-style: none;
+      }
+
+      .pricing-compare-row {
+        width: 100%;
+        grid-auto-columns: 1fr;
+        display: grid;
+        align-items: stretch;
+        border: 1px #151a25;
+        grid-template-rows: auto;
+        grid-column-gap: 0;
+        grid-row-gap: 0;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        @include breakpoint(laptop) {
+          grid-template-columns: 1.5fr 1fr 1fr 1fr;
+        }
+
+        .pricing-compare-feature {
+          text-align: left;
+          padding: 1rem 1rem;
+          grid-area: span 1 / span 3 / span 1 / span 3;
+
+          @include breakpoint(laptop) {
+            padding: 1rem;
+            grid-area: span 1;
+          }
+
+
+        }
+
+        .pricing-compare-row-content {
+          text-align: center;
+          border-left: 1px #1f2123;
+          border-right: 1px #1f2123;
+          justify-content: center;
+          align-items: center;
+          padding: 1rem;
+          font-weight: bold;
+          display: flex;
+
+          @include breakpoint(laptop) {
+            padding: 1rem 1.5rem;
+          }
+
+        }
+      }
+
+
+    }
+  }
+
+  .pricing-compare-bottom-row {
+    grid-auto-columns: 1fr;
+    display: grid;
+    padding-top: 2rem;
+    grid-template-rows: auto;
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+
+    @include breakpoint(laptop) {
+      grid-column-gap: 2rem;
+      grid-row-gap: 0px;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    }
+
+  }
+}
+
+
+.pricing-compare-empty-space {
+  display: none;
+
+  @include breakpoint(laptop) {
+    display: block;
+  }
+}
+
