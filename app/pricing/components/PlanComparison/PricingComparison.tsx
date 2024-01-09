@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react';
 import Container from "@/Components/Container/Container";
 import styles from "./Comparison.module.scss";
@@ -6,8 +8,18 @@ import ComparisonTabs from "@/app/pricing/components/PlanComparison/ComparisonTa
 import Tab from "@/app/pricing/components/Tab";
 import CompareBlock from "@/app/pricing/components/PlanComparison/CompareBlock";
 import {pricingFeatures} from "@/constants/pricingFeatures";
+import {useObserverAnimation} from "@/hooks/useObserverAnimation";
 
 const PricingComparison = () => {
+
+  const animateClass = `${styles.fadeIn}`
+  const refForTitle = useObserverAnimation({
+    amount: "one",
+    classes: `.${styles['comparison-component']}`,
+    animateClass,
+    threshold: 0.1
+  })
+
 
   const pricesMonths = {
     basic: "$19/mo",
@@ -22,7 +34,7 @@ const PricingComparison = () => {
   }
 
   return (
-    <Container component='section'>
+    <Container component='section' ref={refForTitle}>
       <div className={styles['pricing-comparison-component']}>
         <div className={styles['pricing-plan-title']}>
           <Typography component='h2' variant='h2'>Plan <span>Comparison</span></Typography>
