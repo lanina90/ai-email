@@ -1,6 +1,6 @@
 'use client'
 
-import React, {useEffect, useRef} from 'react';
+import React from 'react';
 import styles from './Features.module.scss'
 import Typography from "@/Components/Typography/Typography";
 import FeatureCard from "@/Components/FeatureCard/FeatureCard";

@@ -1,26 +1,28 @@
 import React from 'react';
-import CaseHero from "@/app/use-case/components/CaseHero";
-import CasesList from "@/app/use-case/components/CasesList";
-import CallToAction from "@/Components/CallToAction/CallToAction";
-import Clients from "@/Components/Clients/Clients";
 import {Metadata} from "next";
+import PricingHero from "@/app/pricing/components/PricingHero/PricingHero";
+import CallToAction from "@/Components/CallToAction/CallToAction";
+import PricingPlan from "@/app/pricing/components/PricingPlan/PricingPlan";
+import PricingComparison from "@/app/pricing/components/PlanComparison/PricingComparison";
+import Clients from "@/Components/Clients/Clients";
+import TestimonialSingle from "@/Components/TestimonialSingle/TestimonialSingle";
 
 export const metadata: Metadata = {
-  title: 'Use Cases - AI Email ',
+  title: 'Pricing - AI Email ',
 };
-
 
 const Page = () => {
   return (
     <>
-      <CaseHero/>
-      <CasesList/>
+      <PricingHero/>
+      <PricingPlan/>
+      <PricingComparison/>
       <Clients title="Used by the world's most largest companies"/>
+      <TestimonialSingle/>
       <CallToAction h2='Get Started with Smarter'
                     span='AI Email Solutions Today'
                     text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.'
                     btnText='Start 14 Day Free Trial'/>
-
     </>
   );
 };

@@ -1,0 +1,84 @@
+@import "styles/utils/variables";
+@import "styles/utils/mixin";
+
+.testimonial-component{
+  width: 100%;
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+
+  &.fadeIn {
+    animation: fadeIn 1s ease-out;
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  }
+
+  .testimonial-single{
+    grid-template-rows: auto;
+    grid-auto-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+    display: grid;
+    grid-column-gap: 2.5rem;
+    grid-auto-flow: row;
+    min-height: auto;
+    grid-row-gap: 3rem;
+    grid-template-columns: 1fr;
+
+
+    @include breakpoint(tablet) {
+      grid-row-gap: 2.5rem;
+      grid-template-columns: 1fr 1fr;
+
+    }
+
+    @include breakpoint(laptop) {
+      grid-row-gap: 5rem;
+    }
+
+      .testimonial-client-image{
+        object-fit: cover;
+      }
+
+      .testimonial-single-content{
+        order: -9999;
+        @include flex(column, flex-start, flex-start, 2rem );
+
+        .testimonial-single-stars{
+          display: flex;
+        }
+
+        .testimonial-single-client{
+          display: flex;
+          text-align: left;
+          width: 100%;
+          align-items: center;
+
+        }
+
+        .client-name{
+          color: var(--font-colors--heading-primary);
+          font-weight: 600;
+        }
+
+        .divider{
+          width: 1px;
+          background-color: #333a44;
+          margin-left: 1rem;
+          margin-right: 1rem;
+          align-self: stretch;
+
+          @include breakpoint(laptop) {
+            margin-left: 1.25rem;
+            margin-right: 1.25rem;
+          }
+
+        }
+      }
+
+
+    }
+  }
