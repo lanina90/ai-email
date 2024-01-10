@@ -1,0 +1,44 @@
+@import "styles/utils/variables";
+@import "styles/utils/mixin";
+
+.blog-component{
+  width: 100%;
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  @include flex(column, center, center, 4rem);
+
+  .blog-menu{
+    @include flex(row, center, flex-start, 1rem);
+    width: 100%;
+  }
+
+  .blog-list{
+    grid-column-gap: 2rem;
+    grid-row-gap: 4rem;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+    grid-auto-columns: 1fr;
+    display: grid;
+    width: 100%;
+
+
+    @include breakpoint(tablet){
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include breakpoint(laptop){
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+
+  }
+}
+
+.empty-state {
+  background-color: var(--swatch--charcoal\<deleted\|variable-7ce553ac-38bb-d015-a0dc-c7f61c56011f\>);
+  padding: 10px;
+  width: 100%;
+}
+
+

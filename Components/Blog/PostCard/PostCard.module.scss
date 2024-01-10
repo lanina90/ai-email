@@ -1,0 +1,116 @@
+@import "styles/utils/variables";
+@import "styles/utils/mixin";
+
+.blog-card {
+
+  &.fadeIn {
+    animation: fadeIn 1s ease-out;
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+
+  .blog-image-link {
+    width: 100%;
+    border: 1px solid var(--border--strokes);
+    border-radius: var(--border--radius-small);
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    max-width: 100%;
+    display: inline-block;
+
+    .blog-image-wrapper {
+      width: 100%;
+      padding-top: 66%;
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--border--radius-small);
+
+      & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border-radius: var(--border--radius-small);
+        transition: transform 2s ease;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+
+
+  }
+
+  .blog-category-link {
+    margin-bottom: 0.5rem;
+    margin-right: 1rem;
+    font-size: .875rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-color: var(--swatch--midnight-blue);
+    color: var(--font-colors--link);
+
+
+    .text-color-gradient {
+      background-image: linear-gradient(to right, var(--background-colors--gradient-1), var(--background-colors--gradient-2));
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+      position: static;
+    }
+  }
+
+  .blog-title-link {
+    margin-bottom: 0.5rem;
+    text-decoration: none;
+    display: block;
+  }
+
+  .blog-author-wrapper {
+    align-items: center;
+    margin-top: 1.5rem;
+    display: flex;
+
+    .blog-author-image-wrapper {
+      margin-right: 1rem;
+
+      & img {
+        width: 3rem;
+        height: 3rem;
+        min-height: 3rem;
+        min-width: 3rem;
+        object-fit: cover;
+        border-radius: 100%;
+      }
+
+    }
+
+    .blog-author-text{
+      @include flex(column, flex-start, flex-start, 0);
+
+      .blog-author-name{
+        font-size: .875rem;
+        font-weight: 600;
+      }
+
+      .blog-author-content{
+        @include flex(row, center, center, 0.5rem);
+        font-size: .875rem;
+      }
+    }
+  }
+}

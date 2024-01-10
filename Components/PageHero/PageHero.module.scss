@@ -1,13 +1,18 @@
 @import 'styles/utils/variables';
 @import 'styles/utils/mixin';
 
-.career-hero{
+.hero-section{
   @include flex(column, center, center, 2rem);
   width: 100%;
   max-width: 80rem;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+
+  & p{
+    color: var(--font-colors--paragraph);
+    font-size: 1.125rem;
+  }
 
 
   @include breakpoint(laptop) {

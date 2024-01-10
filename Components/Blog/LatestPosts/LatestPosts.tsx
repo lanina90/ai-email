@@ -6,7 +6,7 @@ import {useObserverAnimation} from "@/hooks/useObserverAnimation";
 import Typography from "@/Components/Typography/Typography";
 import styles from './LatestPosts.module.scss'
 import Button from "@/Components/UI/Button/Button";
-import PostCard from "@/Components/LatestPosts/PostCard/PostCard";
+import PostCard from "@/Components/Blog/PostCard/PostCard";
 import {latestPosts} from "@/constants/latestPosts";
 
 const LatestPosts = () => {
@@ -31,7 +31,7 @@ const LatestPosts = () => {
         <Typography component='p' variant='p'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Typography>
       </div>
       <div className={styles['blog-list']} ref={refForList}>
-        {latestPosts.map(post =>
+        {latestPosts.slice(0, 3).map(post =>
           <Fragment key={post.id}>
             <PostCard post={post}/>
           </Fragment>)}

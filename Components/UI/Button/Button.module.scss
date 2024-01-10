@@ -30,5 +30,17 @@
     line-height: 1;
     font-family: var(--lato-font);
   }
+
+  &--blog{
+    border: 1px solid var(--border--strokes);
+    background-color: var(--background-colors--secondary);
+    white-space: nowrap;
+    flex: none;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    transition: background-color .2s;
+    color: var(--font-colors--link);
+    border-radius: 0;
+  }
 }
 

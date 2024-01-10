@@ -61,5 +61,47 @@ export const latestPosts = [
       published: "December 28, 2023",
       time: "4"
     }
+  },
+  {
+    id: 4,
+    post: {
+      link: "/post/how-saas-is-revolutionizing-business-operations",
+      title: "How Saas is Revolutionizing Business Operations",
+      description: "Unleashing the Power of Creativity and Wordsmithing with SaaS",
+      text: "",
+      src: "https://assets-global.website-files.com/656f1d3d61238bb5e4dfadac/656f1d3d61238bb5e4dfaeb3_Thumbnai_Image-3.jpg",
+      srcSet: "https://assets-global.website-files.com/656f1d3d61238bb5e4dfadac/656f1d3d61238bb5e4dfaeb3_Thumbnai_Image-3-p-500.jpg 500w, https://assets-global.website-files.com/656f1d3d61238bb5e4dfadac/656f1d3d61238bb5e4dfaeb3_Thumbnai_Image-3-p-800.jpg 800w, https://assets-global.website-files.com/656f1d3d61238bb5e4dfadac/656f1d3d61238bb5e4dfaeb3_Thumbnai_Image-3.jpg 832w"
+    },
+    category: {
+      name: "Ideas",
+      link: "/blog-category/idea"
+    },
+    author: {
+      name: "John Mandis",
+      src: "https://assets-global.website-files.com/656f1d3d61238bb5e4dfadac/656f1d3d61238bb5e4dfaf18_6538bb3212618aa14dc8a68f_Team_Avatar_5.jpeg",
+      published: "December 31, 2023",
+      time: "4"
+    }
+  },
+  {
+    id: 5,
+    post: {
+      link: "/post/how-to-use-ai-with-your-saas-product",
+      title: "How to use AI with your Saas Product",
+      description: "Unleashing the Power of Creativity and Wordsmithing with SaaS",
+      text: "",
+      src: "https://assets-global.website-files.com/656f1d3d61238bb5e4dfadac/656f1d3d61238bb5e4dfaf14_Thumbnai_Image-4.jpg",
+      srcSet: "https://assets-global.website-files.com/656f1d3d61238bb5e4dfadac/656f1d3d61238bb5e4dfaf14_Thumbnai_Image-4-p-500.jpg 500w, https://assets-global.website-files.com/656f1d3d61238bb5e4dfadac/656f1d3d61238bb5e4dfaf14_Thumbnai_Image-4-p-800.jpg 800w, https://assets-global.website-files.com/656f1d3d61238bb5e4dfadac/656f1d3d61238bb5e4dfaf14_Thumbnai_Image-4.jpg 832w"
+    },
+    category: {
+      name: "Business",
+      link: "/blog-category/business"
+    },
+    author: {
+      name: "Whitney Adams",
+      src: "https://assets-global.website-files.com/656f1d3d61238bb5e4dfadac/656f1d3d61238bb5e4dfae30_6538bb3212618aa14dc8a68e_Team_Avatar_1.jpeg",
+      published: "January 31, 2024",
+      time: "4"
+    }
   }
 ]
