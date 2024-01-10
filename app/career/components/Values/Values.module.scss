@@ -1,0 +1,66 @@
+@import 'styles/utils/variables';
+@import 'styles/utils/mixin';
+
+
+.values-section{
+  @include flex(column, center, center, 2rem);
+  width: 100%;
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+
+  &.fadeIn {
+    animation: fadeIn 1s ease-out;
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  }
+
+
+  @include breakpoint(laptop) {
+    gap: 3rem;
+  }
+
+  & h2{
+    @include textColorGradient
+  }
+}
+
+.values-content{
+  grid-row-gap: 3rem;
+  grid-column-gap: 2rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  grid-auto-columns: 1fr;
+  align-items: start;
+  justify-items: start;
+  display: grid;
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+
+  &.fadeIn {
+    animation: fadeIn 1s ease-out;
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  }
+
+  @include breakpoint(tablet) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include breakpoint(laptop) {
+    grid-column-gap: 3rem;
+    grid-row-gap: 4rem;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+
+
+}
