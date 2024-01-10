@@ -1,19 +1,23 @@
 import React from 'react';
-import PageHero from "@/Components/PageHero/PageHero";
-import BlogList from "@/Components/Blog/BlogList";
-import {latestPosts} from "@/constants/latestPosts";
 import CallToAction from "@/Components/CallToAction/CallToAction";
+import ContactUs from "@/app/contact/components/ContactUs/ContactUs";
 import {Metadata} from "next";
+import General from "@/app/contact/components/General/General";
+import ContactSales from "@/app/contact/components/ContactSales/ContactSales";
+import Locations from "@/app/contact/components/Locations/Locations";
 
 export const metadata: Metadata = {
-  title: 'Productivity - AI Email ',
+  title: 'Contacts - AI Email ',
 };
+
+
 const Page = () => {
   return (
     <>
-      <PageHero text='Welcome to the "Productivity" blog category, where we delve into the art and science of optimizing efficiency and achieving more with less'
-                title='Productivity'/>
-      <BlogList posts={latestPosts.filter(post => post.category.name === 'Productivity')}/>
+      <ContactUs/>
+      <General/>
+      <ContactSales/>
+      <Locations/>
       <CallToAction h2='Get Started with Smarter'
                     span='AI Email Solutions Today'
                     text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.'
