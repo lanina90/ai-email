@@ -1,0 +1,39 @@
+@import 'styles/utils/variables';
+@import 'styles/utils/mixin';
+
+.values-item {
+  @include flex(column, center, center, 1.25rem);
+
+  @include breakpoint(laptop) {
+    gap: 1.5rem
+  }
+
+
+  .values-icon {
+    border: 1px solid var(--border--strokes);
+    border-radius: var(--border--radius-small);
+    background-color: var(--background-colors--secondary);
+    padding: 1rem;
+    display: inline-block;
+
+    & svg {
+      width: 3rem;
+      height: 3rem;
+      color: var(--icon--icon);
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+    }
+  }
+
+  .values-content {
+    @include flex(column, center, center, 0.75rem);
+    text-align: center;
+
+
+    @include breakpoint(laptop) {
+      gap: 1rem
+    }
+  }
+}

@@ -1,0 +1,103 @@
+@import 'styles/utils/variables';
+@import 'styles/utils/mixin';
+
+.vacancies-section {
+  @include flex(column, center, center, 2rem);
+  width: 100%;
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+
+  &.fadeIn {
+    animation: fadeIn 1s ease-out;
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+
+
+  @include breakpoint(laptop) {
+    gap: 3rem;
+  }
+
+  & h2 {
+    @include textColorGradient
+  }
+}
+
+.vacancies-list {
+  width: 100%;
+  max-width: 48rem;
+  margin-left: auto;
+  margin-right: auto;
+  @include flex(column, center, center, 2rem) ;
+
+  .career-accordion {
+    border: 1px solid var(--border--strokes);
+    background-color: var(--background-colors--secondary);
+    background-image: linear-gradient(to bottom, var(--background-colors--secondary), var(--background-colors--tertiary));
+    border-radius: 0.5rem;
+    @include flex(column, flex-start, stretch, 0) ;
+    padding: 0.5rem 2rem;
+    width: 100%;
+
+    &.fadeIn {
+      animation: fadeIn 1s ease-out;
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    }
+
+
+    .career-job-department {
+      cursor: pointer;
+      border-top: 1px #000;
+      padding-top: 1.25rem;
+      padding-bottom: 1.25rem;
+      @include flex(row, space-between, center, 0) ;
+
+    }
+
+    .career-list {
+      margin-bottom: 2rem;
+      display: block;
+      overflow: hidden;
+
+      .career-item {
+        @include flex(column, flex-start, stretch, 1.5rem) ;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+
+        .career-title-wrapper {
+          @include flex(row, space-between, flex-start, 0) ;
+
+          .career-title-heading{
+
+          & p{
+            color: var(--font-colors--paragraph);
+            font-size: 1.125rem;
+          }
+          }
+        }
+      }
+    }
+
+  }
+}
