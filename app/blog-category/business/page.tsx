@@ -3,6 +3,11 @@ import PageHero from "@/Components/PageHero/PageHero";
 import BlogList from "@/Components/Blog/BlogList";
 import {latestPosts} from "@/constants/latestPosts";
 import CallToAction from "@/Components/CallToAction/CallToAction";
+import {Metadata} from "next";
+
+export const metadata: Metadata = {
+  title: 'Business - AI Email ',
+};
 
 const Page = () => {
   return (

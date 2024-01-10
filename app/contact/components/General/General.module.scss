@@ -1,0 +1,35 @@
+@import 'styles/utils/variables';
+@import 'styles/utils/mixin';
+
+
+.general-contact-block {
+  width: 100%;
+  max-width: 48rem;
+  margin-left: auto;
+  margin-right: auto;
+  @include flex(column, center, center, 1.5rem);
+
+  &.fadeIn {
+    animation: fadeIn 1s ease-out;
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+
+  & p {
+    color: var(--font-colors--paragraph);
+    font-size: 1.125rem;
+
+    & a{
+      text-decoration: underline;
+    }
+  }
+}

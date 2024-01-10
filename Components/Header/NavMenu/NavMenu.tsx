@@ -17,8 +17,8 @@ const NavMenu = () => {
            className={`${styles["navbar-link"]} ${styles["w-nav-link"]} ${styles["w--nav-link-open"]}`}>Career</a>
         <a href="/blogs"
            className={`${styles["navbar-link"]} ${styles["w-nav-link"]} ${styles["w--nav-link-open"]}`}>Blogs</a>
-        <a href="/docs"
-           className={`${styles["navbar-link"]} ${styles["w-nav-link"]} ${styles["w--nav-link-open"]}`}>Docs</a>
+        <a href="/contact"
+           className={`${styles["navbar-link"]} ${styles["w-nav-link"]} ${styles["w--nav-link-open"]}`}>Contact</a>
       </div>
       <div className={styles["navbar-menu-right"]}>
         <a href="/log-in" className={`${styles["button"]} ${styles["is-small"]} ${styles["w-button"]}`}>Get Started</a>

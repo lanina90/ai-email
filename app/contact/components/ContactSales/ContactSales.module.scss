@@ -1,0 +1,168 @@
+@import 'styles/utils/variables';
+@import 'styles/utils/mixin';
+
+.contact-sales-component {
+  width: 100%;
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  @include flex(column, center, center, 1.5rem);
+
+  &.fadeIn {
+    animation: fadeIn 1s ease-out;
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+
+  & h2 {
+    @include textColorGradient;
+    font-size: 2.75rem;
+  }
+
+  & p {
+    color: var(--font-colors--paragraph);
+    font-size: 1.125rem;
+  }
+}
+
+.contact-form {
+  grid-column-gap: 1.5rem;
+  grid-row-gap: 1.5rem;
+  grid-template-rows: auto auto;
+  grid-template-columns: 1fr;
+  grid-auto-columns: 1fr;
+  display: grid;
+  width: 100%;
+  max-width: 48rem;
+  margin-left: auto;
+  margin-right: auto;
+
+
+  &.fadeIn {
+    animation: fadeIn 1s ease-out;
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+
+  .form-field-2col {
+    width: 100%;
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 1.5rem;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-columns: 1fr;
+    display: grid;
+
+
+  }
+}
+
+.form-input {
+  height: auto;
+  vertical-align: middle;
+  width: 100%;
+  min-height: 2.75rem;
+  border: 1px solid var(--form--border);
+  border-radius: var(--border--radius-small);
+  background-color: var(--form--background);
+  color: var(--form--place-holder-text);
+  margin-bottom: 0;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  outline: white;
+
+  &.text-input{
+    height: auto;
+    min-height: 11.25rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    overflow: auto;
+
+
+    &::placeholder{
+      color: var(--form--place-holder-text);
+    }
+  }
+}
+
+.form-field-wrapper {
+  @include flex(column, flex-start, stretch, 0.5rem);
+
+  .field-label {
+    font-weight: 400;
+  }
+
+
+}
+
+.form-checkbox{
+  align-items: center;
+  margin-bottom: 0;
+  padding-left: 1.25rem;
+  display: flex;
+
+  & input[type="checkbox"]{
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+
+    &:checked + .checkbox-input{
+      border-width: 1px;
+      border-color: var(--swatch--periwinkle-blue\<deleted\|variable-e2b23002-dc64-f91c-e772-558067eb89c2\>);
+      box-shadow: none;
+      background-color: #000;
+      background-size: 16px 16px;
+      background-image: url(https://d3e54v103j8qbb.cloudfront.net/static/custom-checkbox-checkmark.589d534424.svg);
+      background-position: 50%;
+      background-repeat: no-repeat;
+
+    }
+
+  }
+
+  & span {
+    font-size: .875rem;
+
+    & a{
+      text-decoration: underline;
+    }
+  }
+
+  .checkbox-input{
+    width: 1.125rem;
+    height: 1.125rem;
+    min-height: 1.125rem;
+    min-width: 1.125rem;
+    border: 1px solid var(--swatch--grey\<deleted\|variable-94a2a119-f0c5-c24a-a78a-21e8abcbac88\>);
+    cursor: pointer;
+    border-radius: 0;
+    margin-top: 0;
+    margin-left: -1.25rem;
+    margin-right: 0.5rem;
+    transition: all .2s;
+
+
+
+  }
+
+}
+

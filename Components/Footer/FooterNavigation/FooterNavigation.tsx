@@ -44,7 +44,6 @@ const FooterNavigation = () => {
         <p className={styles['footer-list-heading']}>Resources</p>
         <div className={styles['footer-list-items']}>
           <Link href="/blogs">Blogs</Link>
-          <Link href="/docs">Docs</Link>
           <Link href="/events">Events</Link>
           <Link href="/change-logs">Change Log</Link>
           <Link href="/customer">Customer</Link>
