@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from "next/link";
 import Typography from "@/Components/Typography/Typography";
-import styles  from '../LatestPosts.module.scss'
+import styles  from './PostCard.module.scss'
 
 interface PostCardProps{
   post: {

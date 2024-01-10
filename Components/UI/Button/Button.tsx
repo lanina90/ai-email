@@ -18,7 +18,7 @@ type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 type CommonProps = {
   children: ReactNode;
   className?: string | null;
-  variant?: 'filled' | 'text' | 'icon';
+  variant?: 'filled' | 'text' | 'icon' | 'blog';
 };
 
 type Props  = CommonProps & (LinkProps | ButtonProps);

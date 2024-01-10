@@ -1,0 +1,47 @@
+@import "styles/utils/variables";
+@import "styles/utils/mixin";
+
+.posts-title {
+  @include flex(column, flex-start, center, 1.25rem);
+
+
+  @include breakpoint(laptop) {
+    gap: 1.5rem;
+  }
+
+  &.fadeIn {
+    animation: fadeIn 1s ease-out;
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+}
+
+.blog-list {
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  grid-column-gap: 2rem;
+  grid-row-gap: 4rem;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr;
+  grid-auto-columns: 1fr;
+  display: grid;
+  width: 100%;
+
+
+  @include breakpoint(laptop) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+
+
+}
