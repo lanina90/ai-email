@@ -21,7 +21,7 @@ const Results = () => {
 
   return (
     <Container component='section' ref={refForComponent} >
-      <div className={styles['results-components']}>
+      <div className={styles['results-component']}>
         <div className={styles['results-text']} >
           <Typography component='h2' variant='h2' className={styles['feature-title']}>Get Better Result with <span>Real World Use Cases</span></Typography>
           <Typography component='p' variant='p'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse

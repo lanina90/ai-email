@@ -7,8 +7,11 @@ import Typography from "@/Components/Typography/Typography";
 import styles from './Testimonials.module.scss'
 import {testimonialsMain} from "@/constants/testimonials";
 import TestimonialCard from "@/Components/Testimonials/TestimonialCard/TestimonialCard";
+import hero from "@/app/components/Hero/Hero";
+import {bool} from "prop-types";
 
-const Testimonials = () => {
+
+const Testimonials = ({hero = true}: {hero?: boolean}) => {
   const animateClass = `${styles.fadeIn}`
   const refForList = useObserverAnimation({
     amount: "many",
@@ -25,10 +28,11 @@ const Testimonials = () => {
 
   return (
     <Container component='section' ref={refForTitle}>
-      <div className={styles['testimonials-title']}>
+      {hero && <div className={styles['testimonials-title']}>
         <Typography component='h2' variant='h2'>You&apos;re in<span> Good Company</span></Typography>
         <Typography component='p' variant='p'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Typography>
-      </div>
+      </div>}
+
       <div className={styles['testimonials-component']} ref={refForList}>
         {testimonialsMain.map(item =>
           <Fragment key={item.id}>
