@@ -3,6 +3,11 @@ import PageHero from "@/Components/PageHero/PageHero";
 import {integration} from "@/constants/integration";
 import Company from "@/app/integration/[id]/components/Company/Company";
 import CallToAction from "@/Components/CallToAction/CallToAction";
+import {Metadata} from "next";
+
+export const metadata: Metadata = {
+  title: 'Integration - AI Email ',
+};
 
 const Page = ({params: {id}}:{params: {id:string}}) => {
   const company = integration.filter(item => item.title.toLowerCase() === id)

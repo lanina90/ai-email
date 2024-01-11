@@ -2,7 +2,11 @@ import React from 'react';
 import PageHero from "@/Components/PageHero/PageHero";
 import CallToAction from "@/Components/CallToAction/CallToAction";
 import IntegrationsList from "@/app/integration/IntegrationsList/IntegrationsList";
+import {Metadata} from "next";
 
+export const metadata: Metadata = {
+  title: 'Integration - AI Email ',
+};
 const Page = () => {
   return (
     <>
