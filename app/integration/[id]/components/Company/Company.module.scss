@@ -1,0 +1,53 @@
+@import "styles/utils/variables";
+@import "styles/utils/mixin";
+
+.company-component {
+  width: 100%;
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  grid-column-gap: 5rem;
+  grid-row-gap: 4rem;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr;
+  grid-auto-columns: 1fr;
+  align-items: start;
+  display: grid;
+
+  @include breakpoint(laptop){
+    grid-template-columns: 1fr .5fr;
+  }
+
+  .company-content {
+    height: auto;
+    @include flex(column, center, flex-start, 2rem);
+    width: 100%;
+
+    @include breakpoint(laptop){
+      gap: 4rem;
+    }
+
+    .company-name{
+      grid-column-gap: 2rem;
+      display: flex;
+      align-items: center;
+
+      & img{
+        width: 3rem;
+      }
+
+
+    }
+
+
+  }
+  .company-info{
+    border: 1px solid var(--border--strokes);
+    border-radius: var(--border--radius-small);
+    background-color: var(--background-colors--secondary);
+    padding: 2rem;
+    position: static;
+    @include flex(column, center, flex-start, 1rem);
+
+  }
+}

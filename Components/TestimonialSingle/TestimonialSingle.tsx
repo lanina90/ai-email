@@ -11,14 +11,14 @@ const TestimonialSingle = () => {
   const animateClass = `${styles.fadeIn}`
   const refForTitle = useObserverAnimation({
     amount: "one",
-    classes: `.${styles['testimonial-component']}`,
+    classes: `.${styles['testimonial-components']}`,
     animateClass,
     threshold: 0.1
   })
 
   return (
     <Container component='section' ref={refForTitle}>
-      <div className={styles['testimonial-component']}>
+      <div className={styles['testimonial-components']}>
         <div className={styles['testimonial-single']}>
           <img
             src="https://assets-global.website-files.com/656f1d3d61238bb5e4dfada3/656f1d3d61238bb5e4dfadc6_Testimonial.jpg"

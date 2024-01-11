@@ -7,7 +7,7 @@ const Tabs = ({ children } : any ) => {
   const [activeTab, setActiveTab] = useState('Tab 1');
 
   return (
-    <div className={styles["pricing-component"]}>
+    <div className={styles["pricing-components"]}>
       <div className={styles['pricing-tabs-menu']} role="tablist">
         {React.Children.map(children, child => (
           React.cloneElement(child, { isActive: child.props.id === activeTab, setActiveTab })

@@ -8,7 +8,7 @@ const ComparisonTabs = ({ children } : any) => {
 
 
   return (
-    <div className={styles["comparison-component"]}>
+    <div className={styles["comparison-components"]}>
       <div className={styles['comparison-tabs-menu']} role="tablist">
         {React.Children.map(children, child => (
           React.cloneElement(child, {isActive: child.props.id === activeTab, setActiveTab})

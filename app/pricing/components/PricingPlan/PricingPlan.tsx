@@ -21,7 +21,7 @@ const PricingPlan = () => {
 
   return (
     <Container component='section' ref={refForComponent}>
-      <div className={styles['pricing-plan-component']}>
+      <div className={styles['pricing-plan-components']}>
         <div className={styles['pricing-plan-title']}>
           <Typography component='h2' variant='h2'>Pricing <span>Plan</span></Typography>
           <Typography component='p' variant='p'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.

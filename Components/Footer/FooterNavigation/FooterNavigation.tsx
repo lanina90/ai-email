@@ -2,6 +2,7 @@ import Link from 'next/link';
 import React from 'react';
 import Typography from "@/Components/Typography/Typography";
 import styles from '../Footer.module.scss'
+
 const FooterNavigation = () => {
   return (
     <div className={styles['footer-top-wrapper']}>
@@ -15,17 +16,6 @@ const FooterNavigation = () => {
           varius enim in eros elementum tristique.</Typography>
       </div>
       <div className={styles['footer-link-list']}>
-        <p className={styles['footer-list-heading']}>Products</p>
-        <div className={styles['footer-list-items']}>
-          <Link href="/products/echomail">EchoMail</Link>
-          <Link href="/products/aiscribe">AIScribe</Link>
-          <Link href="/products/crafthub">CraftHub</Link>
-          <Link href="/products/sendmind">SendMind</Link>
-          <Link href="/products/mailgenius">MailGenius</Link>
-          <Link href="/products/composeiq">ComposeIQ</Link>
-        </div>
-      </div>
-      <div className={styles['footer-link-list']}>
         <p className={styles['footer-list-heading']}>Company</p>
         <div className={styles['footer-list-items']}>
           <Link href="/">Home</Link>
@@ -37,7 +27,7 @@ const FooterNavigation = () => {
           <Link href="/career">Career</Link>
           <Link href="/contact">Contact</Link>
           <Link href="/integration">Integration</Link>
-          <Link href="/testimonial">Testimonial</Link>
+          <Link href="/testimonial">Testimonials</Link>
         </div>
       </div>
       <div className={styles['footer-link-list']}>

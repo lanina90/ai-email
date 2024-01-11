@@ -27,6 +27,10 @@
     margin-left: auto;
     margin-right: auto;
 
+    @include breakpoint(tablet) {
+      grid-template-columns: 1fr 1fr;
+    }
+
 
     @include breakpoint(laptop) {
       grid-template-columns: 1fr 1fr 1fr;
@@ -47,6 +51,7 @@
       position: relative;
       overflow: hidden;
       @include flex(column, null, flex-start, 1.25rem);
+      min-height: 252px;
 
       &.fadeIn {
         animation: fadeIn 1s ease-out;
