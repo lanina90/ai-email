@@ -12,14 +12,14 @@ const ContactUs = () => {
   const animateClass = `${styles.fadeIn}`
   const refForComponent = useObserverAnimation({
     amount: "one",
-    classes: `.${styles['contact-component']}`,
+    classes: `.${styles['contact-components']}`,
     animateClass,
     threshold: 0.1
   })
 
   return (
     <Container component='section' ref={refForComponent}>
-      <div className={styles['contact-component']}>
+      <div className={styles['contact-components']}>
         <Typography component='h1' variant='h2'>Got any Questions?</Typography>
         <Typography component='p' variant='p'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
           varius enim in ero.</Typography>

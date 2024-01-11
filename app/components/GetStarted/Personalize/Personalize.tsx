@@ -11,7 +11,7 @@ const Personalize = () => {
   const animateClass = `${styles.fadeIn}`
   const RefForLayout = useObserverAnimation({
     amount: "one",
-    classes: `.${styles['layout-component']}`,
+    classes: `.${styles['layout-components']}`,
     animateClass,
     threshold: 0.1
   })

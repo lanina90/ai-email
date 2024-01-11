@@ -31,7 +31,7 @@ interface BlogListProps{
 const BlogList = ({posts}:BlogListProps) => {
   return (
     <Container component='section'>
-      <div className={styles['blog-component']}>
+      <div className={styles['blog-components']}>
         <div className={styles['blog-menu']}>
           {blogLinks.map(link =>
           <Fragment key={link.id}>

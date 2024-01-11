@@ -79,7 +79,7 @@ const Solutions = () => {
               <Typography component='h3' variant='h5'>Integration</Typography>
               <Typography component='p' variant='p'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
                 varius enim in eros elementum tristique.</Typography>
-              <Button variant='text' component='link' href='/intergation'>View All</Button>
+              <Button variant='text' component='link' href='/integration'>View All</Button>
             </div>
           </div>
           <div className={styles['card-item']}>

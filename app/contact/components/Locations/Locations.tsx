@@ -5,7 +5,7 @@ import Container from "@/Components/Container/Container";
 import styles from "./Locations.module.scss";
 import Typography from "@/Components/Typography/Typography";
 import {useObserverAnimation} from "@/hooks/useObserverAnimation";
-import Button from "@/Components/UI/Button/Button";
+
 
 const Locations = () => {
   const animateClass = `${styles.fadeIn}`
@@ -21,7 +21,7 @@ const Locations = () => {
       <div className={styles['location-section']}>
         <Typography component='h2' variant='h2'>Our locations</Typography>
         <Typography component='p' variant='p'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Typography>
-        <div className={styles['locations-component']}>
+        <div className={styles['locations-components']}>
           <div className={styles['location']}>
             <div className={styles['location-image']}><img
               src="https://assets-global.website-files.com/656f1d3d61238bb5e4dfada3/656f1d3d61238bb5e4dfadc5_Contact_1.jpg"

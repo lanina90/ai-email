@@ -13,7 +13,7 @@ const Team = () => {
   const animateClass = `${styles.fadeIn}`
   const refForComponent = useObserverAnimation({
     amount: "one",
-    classes: `.${styles['team-component']}`,
+    classes: `.${styles['team-components']}`,
     animateClass,
     threshold: 0.1
   })

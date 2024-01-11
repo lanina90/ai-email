@@ -9,8 +9,7 @@ const ProductsList = () => {
     <Container component='section' className={styles['products-list']}>
       {products.map(product =>
         <Fragment key={product.id}>
-          <FeatureCard icon={product.icon} alt={product.title} title={product.title} text={product.text}
-                       link={product.link}/>
+          <FeatureCard icon={product.icon} alt={product.title} title={product.title} text={product.text}/>
         </Fragment>)}
     </Container>
   );

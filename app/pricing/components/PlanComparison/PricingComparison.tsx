@@ -15,7 +15,7 @@ const PricingComparison = () => {
   const animateClass = `${styles.fadeIn}`
   const refForTitle = useObserverAnimation({
     amount: "one",
-    classes: `.${styles['comparison-component']}`,
+    classes: `.${styles['comparison-components']}`,
     animateClass,
     threshold: 0.1
   })
@@ -35,7 +35,7 @@ const PricingComparison = () => {
 
   return (
     <Container component='section' ref={refForTitle}>
-      <div className={styles['pricing-comparison-component']}>
+      <div className={styles['pricing-comparison-components']}>
         <div className={styles['pricing-plan-title']}>
           <Typography component='h2' variant='h2'>Plan <span>Comparison</span></Typography>
           <Typography component='p' variant='p'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.

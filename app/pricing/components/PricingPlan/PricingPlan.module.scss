@@ -2,7 +2,7 @@
 @import 'styles/utils/mixin';
 
 
-.pricing-plan-component {
+.pricing-plan-components {
   @include flex(column, center, center, 2rem);
   width: 100%;
   max-width: 80rem;
@@ -33,7 +33,7 @@
 
 }
 
-.pricing-component {
+.pricing-components {
   flex-direction: column;
   justify-content: center;
   align-items: stretch;
