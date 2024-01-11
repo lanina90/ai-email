@@ -27,7 +27,7 @@ const FooterNavigation = () => {
           <Link href="/career">Career</Link>
           <Link href="/contact">Contact</Link>
           <Link href="/integration">Integration</Link>
-          <Link href="/testimonial">Testimonials</Link>
+          <Link href="/testimonials">Testimonials</Link>
         </div>
       </div>
       <div className={styles['footer-link-list']}>
