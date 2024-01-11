@@ -3,7 +3,11 @@ import PageHero from "@/Components/PageHero/PageHero";
 import CallToAction from "@/Components/CallToAction/CallToAction";
 import Testimonials from "@/Components/Testimonials/Testimonials";
 import TestimonialSingle from "@/Components/TestimonialSingle/TestimonialSingle";
+import {Metadata} from "next";
 
+export const metadata: Metadata = {
+  title: 'Testimonials - AI Email ',
+};
 const Page = () => {
   return (
     <>

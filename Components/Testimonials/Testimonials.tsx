@@ -10,6 +10,7 @@ import TestimonialCard from "@/Components/Testimonials/TestimonialCard/Testimoni
 import hero from "@/app/components/Hero/Hero";
 import {bool} from "prop-types";
 
+
 const Testimonials = ({hero = true}: {hero?: boolean}) => {
   const animateClass = `${styles.fadeIn}`
   const refForList = useObserverAnimation({
