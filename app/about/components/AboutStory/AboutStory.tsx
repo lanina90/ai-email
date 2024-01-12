@@ -22,6 +22,9 @@ const AboutStory = () => {
     threshold: 0.1
   })
 
+
+
+
   const handleScroll = () => {
     const currentScrollTop = window.scrollY || document.documentElement.scrollTop;
 
