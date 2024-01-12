@@ -22,7 +22,7 @@ const FooterNavigation = () => {
           <Link href="/about">About</Link>
           <Link href="/pricing">Pricing</Link>
           <Link href="/products">Products</Link>
-          <Link href="/feature">Feature</Link>
+          <Link href="/features">Features</Link>
           <Link href="/use-case">Use Case</Link>
           <Link href="/career">Career</Link>
           <Link href="/contact">Contact</Link>

@@ -1,0 +1,111 @@
+@import "styles/utils/variables";
+@import "styles/utils/mixin";
+
+.features-title{
+  width: 100%;
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  grid-column-gap: 3rem;
+  grid-row-gap: 2rem;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr;
+  grid-auto-columns: 1fr;
+  align-items: start;
+  display: grid;
+
+  @include breakpoint(laptop){
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 5rem;
+    grid-row-gap: 4rem;
+  }
+
+  & h2{
+    text-align: left;
+  }
+
+  .features-text{
+    @include flex(column, center, flex-start, 1rem);
+  }
+
+  &.fadeIn {
+    animation: fadeIn 1s ease-out;
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  }
+}
+
+.features-list{
+  width: 100%;
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+  grid-template-rows: auto auto;
+  grid-template-columns: 1fr;
+  grid-auto-columns: 1fr;
+  display: grid;
+
+  @include breakpoint(tablet){
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include breakpoint(laptop){
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+ .feature-card{
+   width: 100%;
+   grid-column-gap: 16px;
+   grid-row-gap: 16px;
+   border-radius: var(--border--radius-small);
+   flex-direction: row;
+   grid-template-rows: auto;
+   grid-template-columns: max-content 1fr;
+   grid-auto-columns: 1fr;
+   align-items: flex-start;
+   padding: 2rem;
+   transition: background-color .2s;
+   display: grid;
+   position: relative;
+   overflow: hidden;
+
+   &.fadeIn {
+     animation: fadeIn 1s ease-out;
+
+     @keyframes fadeIn {
+       from { opacity: 0; transform: translateY(20px); }
+       to { opacity: 1; transform: translateY(0); }
+     }
+   }
+
+   .feature-card-icon{
+     grid-column-gap: 0.5rem;
+     grid-row-gap: 0.5rem;
+     align-items: center;
+     display: flex;
+     grid-area: span 1 / span 1 / span 1 / span 1;
+
+     .icon-wrapper{
+       padding: 0.5rem;
+       display: inline-block;
+
+     }
+   }
+
+   .feature-card-content{
+     flex-direction: column;
+     align-items: flex-start;
+     padding-top: 0.5rem;
+     display: flex;
+     gap: 1rem;
+
+   }
+ }
+
+}
+
