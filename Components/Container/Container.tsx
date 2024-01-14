@@ -7,15 +7,17 @@ type ContainerProps = {
   children: ReactNode;
   component: keyof JSX.IntrinsicElements;
   className?: string;
+  id?: string
 };
 
 const Container = forwardRef<HTMLDivElement, ContainerProps>(
-  ({ children, component, className, ...props }, ref) =>
+  ({ children, component, className, id,  ...props }, ref) =>
     createElement(
       component,
       {
         className: classNames(className, styles.container),
         ref,
+        id,
         ...props
       },
       children

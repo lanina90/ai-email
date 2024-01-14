@@ -7,7 +7,7 @@ import Button from "@/Components/UI/Button/Button";
 
 const NotFound = () => {
   return (
-    <Container component='section' className={styles['not-found-components']}>
+    <Container component='section' className={styles['not-found-component']}>
       <BackGround/>
       <div className={styles['not-found-section']}>
         <Typography component='h2' variant='h2'>Page Not Found</Typography>

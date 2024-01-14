@@ -18,7 +18,6 @@ const FooterNavigation = () => {
       <div className={styles['footer-link-list']}>
         <p className={styles['footer-list-heading']}>Company</p>
         <div className={styles['footer-list-items']}>
-          <Link href="/">Home</Link>
           <Link href="/about">About</Link>
           <Link href="/pricing">Pricing</Link>
           <Link href="/products">Products</Link>
@@ -35,12 +34,6 @@ const FooterNavigation = () => {
         <div className={styles['footer-list-items']}>
           <Link href="/blogs">Blogs</Link>
           <Link href="/events">Events</Link>
-          <Link href="/change-logs">Change Log</Link>
-          <Link href="/customer">Customer</Link>
-          <Link href="/faq">FAQs</Link>
-          <Link href="/demo">Demo</Link>
-          <Link href="/media">Media</Link>
-          <Link href="/partner">Partner</Link>
         </div>
       </div>
       <div className={styles['footer-link-list']}>
@@ -48,8 +41,6 @@ const FooterNavigation = () => {
         <div className={styles['footer-list-items']}>
           <Link href="/sign-up">Sign Up</Link>
           <Link href="/log-in">Log In</Link>
-          <Link href="/forgot-password">Forgot Password</Link>
-          <Link href="/401">Password Protected</Link>
           <Link href="/404">404</Link>
         </div>
       </div>
