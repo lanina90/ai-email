@@ -1,0 +1,26 @@
+@import "styles/utils/variables";
+@import "styles/utils/mixin";
+
+.auth-component {
+  width: 100%;
+  max-width: 35rem;
+  margin: 0 auto;
+  border: 1px solid var(--border--strokes);
+  border-radius: var(--border--radius-small);
+  background-color: var(--background-colors--primary);
+  background-image: linear-gradient(to bottom, var(--background-colors--secondary), var(--background-colors--tertiary));
+  padding: 2rem;
+  @include flex(column, flex-start, center, 2rem);
+
+  .auth-heading {
+    @include flex(column, center, center, 1.5rem);
+
+
+    & h1 {
+      @include textColorGradient;
+    }
+  }
+
+
+
+}

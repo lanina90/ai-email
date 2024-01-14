@@ -24,9 +24,9 @@ const Features = () => {
   })
 
   return (
-    <Container component='section' ref={RefForTitle}>
+    <Container component='section' ref={RefForTitle} id='Feature' >
       <Typography component='h2' variant='h2' className={styles['feature-title']}>Get Better Result with <span>Stunning Features</span></Typography>
-      <div className={styles['feature-list']} ref={RefForList}>
+      <div  className={styles['feature-list']} ref={RefForList}>
        <FeatureCard
          img='https://assets-global.website-files.com/656f1d3d61238bb5e4dfadac/6576c33d271670c966b13716_Outbox.png'
          alt='security'
